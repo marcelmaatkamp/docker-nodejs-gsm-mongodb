@@ -15,6 +15,6 @@ RUN \cp -f /data/node_modules/bson/node_modules/bson-ext/ext/index.js /data/node
 # ---
 # add sources 
 
-ADD js data
+ADD js .
 
-ENTRYPOINT      ["node", "mongodb.js"]
+ENTRYPOINT      ["node", "/data/mongodb.js"]
