@@ -8,7 +8,9 @@ RUN npm install mongodb
 RUN npm install amqp
 RUN npm install -g node-gyp
 RUN npm install bson
-RUN \cp -f node_modules/bson/ext/index.js node_modules/bson/ext/index.js.orig; cat node_modules/bson/ext/index.js | sed -e 's/..\/build\/Release\/bson/bson/g' | > node_modules/bson/ext/index.js.bak; mv -f node_modules/bson/ext/index.js.bak node_modules/bson/ext/index.js
+
+# /data/node_modules/bson/node_modules/bson-ext/ext/index.js
+RUN \cp -f /data/node_modules/bson/node_modules/bson-ext/ext/index.js /data/node_modules/bson/node_modules/bson-ext/ext/index.js.orig; cat /data/node_modules/bson/node_modules/bson-ext/ext/index.js | sed -e 's/..\/build\/Release\/bson/bson/g' > /data/node_modules/bson/node_modules/bson-ext/ext/index.js.bak; mv -f /data/node_modules/bson/node_modules/bson-ext/ext/index.js.bak /data/node_modules/bson/node_modules/bson-ext/ext/index.js
 
 # ---
 # add sources 
