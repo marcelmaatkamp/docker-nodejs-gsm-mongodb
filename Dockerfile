@@ -5,7 +5,7 @@ MAINTAINER m.maatkamp@gmail.com version: 0.1
 # add libraries
 
 RUN npm install mongodb 
-RUN npm install amqp
+RUN npm install amqplib
 RUN npm install -g node-gyp
 RUN npm install bson
 
