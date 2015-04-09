@@ -29,7 +29,7 @@ amqp.connect('amqp://rabbitmq').then(function(conn) {
     });
 
     function logMessage(msg) {
-      console.log(" [x] '%s'", msg.content.toString(hex));
+      console.log(" [x] '%s'", msg.content.toString('hex'));
     }
   });
 }).then(null, console.warn);
